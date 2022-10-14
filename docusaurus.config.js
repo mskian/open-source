@@ -123,6 +123,27 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    plugins: [
+      [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: false,
+        offlineModeActivationStrategies: ["appInstalled", "standalone", "queryString"],
+        pwaHead: [
+          { tagName: "link", rel: "apple-touch-icon", sizes: "180x180", href: "/img/apple-icon-180.png" },
+          //{ tagName: "link", rel: "icon", sizes: "32x32", href: "/favicon-32x32.png" },
+          //{ tagName: "link", rel: "icon", sizes: "16x16", href: "/favicon-16x16.png" },
+          { tagName: "link", rel: "icon", sizes: "196x196", href: "/img/favicon-196.png" },
+          { tagName: "link", rel: "manifest", href: "/manifest.json" },
+          { tagName: "meta", name: "theme-color", content: "#B388C5" },
+          { tagName: "meta", name: "mobile-web-app-capable", content: "yes" },
+          { tagName: "meta", name: "application-name", content: "Hello San" },
+          { tagName: "meta", name: "apple-mobile-web-app-capable", content: "yes" },
+          { tagName: "meta", name: "apple-mobile-web-app-title", content: "Hello San" },
+        ],
+      },
+    ]
+  ],
 };
 
 module.exports = config;

@@ -1,0 +1,15 @@
+{
+    "short_name": "Hello San",
+    "name": "Hello San",
+    "icons": [
+      { "src": "/img/Icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+      { "src": "/img/Icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    ],
+    "start_url": "/",
+    "background_color": "#B388C5",
+    "orientation": "any",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#B388C5",
+    "description": "This site was Mainly built for Sharing about Open Source Eco-system which I use in My Daily Routine also Bookmark the links and Codes i collect"
+}
