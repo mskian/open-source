@@ -28,3 +28,43 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.Toastify__toast {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast-container {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast--rtl {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast--dark {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast--default {
+  font-family: 'Catamaran', sans-serif;
+}
+.Toastify__toast--info {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast--success {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast--warning {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast--error {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast-body {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
