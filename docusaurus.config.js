@@ -71,6 +71,11 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            href: '/diwali',
+            label: 'Diwali Wish',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/mskian/open-source',
             label: 'GitHub',
             position: 'right',

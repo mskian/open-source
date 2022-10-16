@@ -93,7 +93,7 @@ class RetrieveList extends Component {
       saveAs(
         `https://images.weserv.nl/?url=https://img.sanweb.info/diwali/diwali?name=` +
           slugdata,
-        `${slugdata}.jpeg`
+        `${slugdata}.png`
       );
     };
     return (
