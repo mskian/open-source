@@ -16,7 +16,7 @@ export async function onRequest(context) {
     return res
   }
 
-  let name = searchParams.get('name') || 'Your Name'
+  let name = searchParams.get('name') || 'Greetings'
   let ogtag
   let userName = name.replace('-', ' ');
 
