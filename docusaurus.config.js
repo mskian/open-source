@@ -57,7 +57,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '$root@hello-world',
+        title: '$san@hello-world',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',

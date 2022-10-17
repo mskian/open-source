@@ -91,7 +91,7 @@ class RetrieveList extends Component {
       " Sending you the Happy Diwali Greeting Wishes";
     const downloadImage = () => {
       saveAs(
-        `https://images.weserv.nl/?url=https://img.sanweb.info/diwali/diwali?name=` +
+        `https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=` +
           slugdata,
         `${slugdata}.png`
       );
@@ -123,7 +123,7 @@ class RetrieveList extends Component {
                       <img
                         className="card__image"
                         src={
-                          `https://images.weserv.nl/?url=https://img.sanweb.info/diwali/diwali?name=` +
+                          `https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=` +
                           slugdata
                         }
                         alt={wishername}

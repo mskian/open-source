@@ -8,8 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/privacy.svg').default,
     description: (
       <>
-        Focus on Privacy <br />
-        <b>$root@hello-world</b>
+        Focus on Privacy
       </>
     ),
   },
