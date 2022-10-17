@@ -12,7 +12,7 @@ export async function onRequest(context) {
   const res = await next()
   const { searchParams, pathname } = new URL(request.url)
 
-  if (!(pathname === '/index.html' || pathname === '/')) {
+  if (!(pathname === '/diwali/' || pathname === '/diwali/?name=')) {
     return res
   }
 
