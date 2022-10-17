@@ -16,11 +16,14 @@ export async function onRequest(context) {
     return res
   }
 
-  let name = searchParams.get('myQuery')
+  let name = searchParams.get('name')
   let ogtag
 
   // these are the metatags we want to inject into the site
   ogtag = `
+  <meta property="og:title" content="${name} - Happy Diwali Wishes" />
+  <meta property="og:description" content="${name} - Sending you the Happy Diwali Greeting Wishes" />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="${request.url}" />
   <meta property="og:image" content="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=${name}" />
   `
