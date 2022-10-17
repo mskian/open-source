@@ -18,11 +18,15 @@ export async function onRequest(context) {
 
   let name = searchParams.get('name') || 'Your Name'
   let ogtag
+  let userName = name.replace('-', ' ');
 
-  // these are the metatags we want to inject into the site
   ogtag = `
-  <meta property="og:title" content="${name} - Happy Diwali Wishes" />
-  <meta property="og:description" content="${name} - Sending you the Happy Diwali Greeting Wishes" />
+  <!-- inject Meta tags via Cloudflare Functions -->
+  <title>${userName} - Happy Diwali Wishes</title>
+  <meta name="description" content="${userName} - Sending you the Happy Diwali Greeting Wishes." />
+  <link rel="canonical" href=${request.url} />
+  <meta property="og:title" content="${userName} - Happy Diwali Wishes" />
+  <meta property="og:description" content="${userName} - Sending you the Happy Diwali Greeting Wishes" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${request.url}" />
   <meta property="og:image" content="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=${name}" />
