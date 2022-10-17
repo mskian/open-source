@@ -99,6 +99,14 @@ class RetrieveList extends Component {
     return (
       <Layout>
         <Head>
+          <title>{`${wishername} - Happy Diwali Wishes`}</title>
+          <meta name="description" content={`${wishername} - Sending you the Happy Diwali Greeting Wishes.` } />
+          <link rel="canonical" href={pathname} />
+          <meta property="og:title" content={`${wishername} - Happy Diwali Wishes`} />
+          <meta property="og:description" content={`${wishername} - Sending you the Happy Diwali Greeting Wishes.` } />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={pathname} />
+          <meta property="og:image" content={"https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=" + slugdata} />
           <link rel="preconnect" href="https://images.weserv.nl/" crossorigin />
           <link rel="preconnect" href="https://img.sanweb.info/" crossorigin />
           <link
