@@ -1,34 +1,29 @@
-let name
-let ogtag
-
 class ElementHandler {
+  constructor(ogtag) {
+    this.ogtag = ogtag
+  }
   element(element) {
-    element.append(ogtag, { html: true })
+    element.append(this.ogtag, { html: true })
   }
 }
 
 export async function onRequest(context) {
-  const {
-    request,
-    env,
-    params,
-    waitUntil,
-    next,
-    data,
-  } = context
+  const { request, next } = context
+  const res = await next()
+  const { searchParams, pathname } = new URL(request.url)
 
-   const { searchParams, pathname } = new URL(request.url)
-
-   let res = await next()
-
-   if (!(pathname === '/diwali' || pathname === '/diwali/index.html')) {
-      return res
+  if (!(pathname === '/index.html' || pathname === '/')) {
+    return res
   }
 
-  name = searchParams.get("name")
+  let name = searchParams.get('myQuery')
+  let ogtag
+
+  // these are the metatags we want to inject into the site
   ogtag = `
-    <meta property="og:url" content="${request.url}" />
-    <meta property="og:image" content="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=${name}" />
+  <meta property="og:url" content="${request.url}" />
+  <meta property="og:image" content="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=${name}" />
   `
+
   return new HTMLRewriter().on('head', new ElementHandler(ogtag)).transform(res)
 }
