@@ -26,7 +26,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  trailingSlash: true,
   presets: [
     [
       'classic',
@@ -69,9 +69,9 @@ const config = {
             position: 'left',
             label: 'Things i Use',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog/', label: 'Blog', position: 'left'},
           {
-            href: '/diwali',
+            href: '/diwali/',
             label: 'Diwali Wish',
             position: 'right',
           },
@@ -90,7 +90,7 @@ const config = {
             items: [
               {
                 label: 'Termux',
-                to: '/docs/category/termux',
+                to: '/docs/category/termux/',
               },
             ],
           },
@@ -112,7 +112,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: '/blog/',
               },
               {
                 label: 'GitHub',

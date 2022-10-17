@@ -16,7 +16,7 @@ export async function onRequest(context) {
     return res
   }
 
-  let name = searchParams.get('name')
+  let name = searchParams.get('name') || 'Your Name'
   let ogtag
 
   // these are the metatags we want to inject into the site
