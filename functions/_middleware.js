@@ -1,6 +1,5 @@
 let name
 let ogtag
-let cache = caches.default;
 
 class ElementHandler {
   element(element) {
@@ -19,6 +18,8 @@ export async function onRequest(context) {
     data,
   } = context
 
+  if ((pathname == '/diwali/index.html' || pathname == '/diwali')) {
+
   let res = await next()
 
   // get query strings provided with request and path name accessing the page
@@ -32,8 +33,6 @@ export async function onRequest(context) {
     <meta property="og:url" content="${request.url}" />
     <meta property="og:image" content="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=${name}" />
   `
-
-  if ((pathname == '/diwali/index.html' || pathname == '/diwali')) {
-  return cache.rewriter.transform(res)
+  return rewriter.transform(res)
   }
 }
