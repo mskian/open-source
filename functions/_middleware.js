@@ -18,12 +18,12 @@ export async function onRequest(context) {
     data,
   } = context
 
-  if ((pathname == '/diwali/index.html' || pathname == '/diwali')) {
+   // get query strings provided with request and path name accessing the page
+   const { searchParams, pathname } = new URL(request.url)
+
+  if (pathname == '/diwali/index.html' || pathname == '/diwali') {
 
   let res = await next()
-
-  // get query strings provided with request and path name accessing the page
-  const { searchParams, pathname } = new URL(request.url)
 
   // querystring I'm looking for to create dynamic images, this is an optional thing depending on your case
   name = searchParams.get("name")
