@@ -30,5 +30,5 @@ export async function onRequest(context) {
     <meta property="og:url" content="${request.url}" />
     <meta property="og:image" content="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=${name}" />
   `
-  return new HTMLRewriter().on("head", new ElementHandler())
+  return new HTMLRewriter().on('head', new ElementHandler(ogtag)).transform(res)
 }
