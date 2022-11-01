@@ -241,6 +241,30 @@ pkg install ruby
 pkg install rust
 ```
 
+- install PRoot
+
+```sh
+pkg install proot
+```
+
+- use chroot
+
+Fixes the DNS lookup issue  
+
+```sh
+$ termux-chroot
+$ ls /usr
+#logout
+exit
+```
+
+- Delete Read only Files or Folders
+
+```sh
+chmod 700 -R ~/<filename or folder name>
+rm -rf ~/<filename or folder name>
+```
+
 - Customize the Termux Terminal Emulator - <https://amsk.in/2IF0ibt>
 
 - Install `Termux-exec` Read More about this Package - <https://wiki.termux.com/wiki/Termux-exec>
@@ -249,7 +273,7 @@ pkg install rust
 pkg install termux-exec
 ```
 
-- Install Termux API (Full info about this - <https://wiki.termux.com/wiki/Termux:API> (Don't Forget to Install Termux API APP from Playstore)
+- Install Termux API (Full info about this - <https://wiki.termux.com/wiki/Termux:API> (Don't Forget to Install Termux API APP from F-Driod)
 
 ```bash
 pkg install termux-api
@@ -258,7 +282,8 @@ pkg install termux-api
 - Termux SD Card Permission ( <https://wiki.termux.com/wiki/Termux-setup-storage> )
 
 ```bash
-pkg up
+pkg update
+pkg upgrade
 ```
 
 ```bash
