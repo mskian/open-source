@@ -27,7 +27,7 @@
     "react-dom": "^18.2.0",
     "react-form-input-validation": "^2.1.0",
     "react-toastify": "^9.1.2",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.0"
